@@ -1,0 +1,34 @@
+{
+	"port": 8080,
+	"protocol": "http",
+	"stubs": [
+		{
+			"predicates": [
+				{
+					"equals": {
+						"method": "GET",
+						"path": "/tempo-api/temperatura",
+						"query": {
+							"regiao": "Sudoeste"
+						}
+					}
+				}
+			],
+			"responses": [
+				{
+					"is": {
+						"statusCode": 200,
+						"headers": {
+							"Content-Type": "application/json"
+						},
+						"body": {
+							"data": {
+								"temperatura": 35.50
+							}
+						}
+					}
+				}
+			]
+		}
+	]
+}
